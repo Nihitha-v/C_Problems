@@ -1,13 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    for(i = 1; i <= 9; i++) 
-    {
-        if(i % 2 != 0) 
-        {
-            printf("%d\n", i);
-        }
-    }
+    int i = 1;
+start:
+    printf("%d\n", i);
+    i = i + 2;
+    if (i <= 9)
+        goto start;
     return 0;
 }

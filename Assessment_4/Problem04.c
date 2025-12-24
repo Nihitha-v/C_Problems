@@ -1,11 +1,12 @@
 #include <stdio.h>
 int main()
 {
-    int i, sum = 0;
-    for(i = 6; i >= 1; i--) 
-    {
-        sum = sum + i;
-    }
+    int i = 6, sum = 0;
+start:
+    sum = sum + i;
+    i = i - 1;
+    if (i >= 1)
+        goto start;
     printf("%d", sum);
     return 0;
 }
